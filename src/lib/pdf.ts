@@ -1,0 +1,6 @@
+import {PDFDocument,degrees} from 'pdf-lib';
+export async function mergePdfs(inputs:Uint8Array[]){if(!inputs.length)throw new Error('Choose at least one PDF first.');const output=await PDFDocument.create();for(const bytes of inputs){const input=await PDFDocument.load(bytes);const pages=await output.copyPages(input,input.getPageIndices());pages.forEach(page=>output.addPage(page))}return output.save({useObjectStreams:true})}
+export async function extractPdfPages(input:Uint8Array,indices:number[]){const source=await PDFDocument.load(input);const output=await PDFDocument.create();const pages=await output.copyPages(source,indices);pages.forEach(page=>output.addPage(page));return output.save({useObjectStreams:true})}
+export async function rotatePdf(input:Uint8Array,angle:number){const doc=await PDFDocument.load(input);doc.getPages().forEach(page=>page.setRotation(degrees((page.getRotation().angle+angle)%360)));return doc.save({useObjectStreams:true})}
+export async function getPdfPageCount(input:Uint8Array){return (await PDFDocument.load(input)).getPageCount()}
+export async function rewritePdf(input:Uint8Array){const doc=await PDFDocument.load(input);return doc.save({useObjectStreams:true})}
