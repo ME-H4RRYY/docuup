@@ -9,3 +9,4 @@
 .themebtn{width:34px;height:34px;border-radius:7px;border:1px solid var(--line);background:#fff;color:#666d80;display:grid;place-items:center;flex:none}.themebtn:hover{border-color:#c5cbe5;color:#536de0}
 
 :root[data-theme='dark'] .button.secondary{background:#292d3a;border:1px solid #484d5d;color:#eff1fa}:root[data-theme='dark'] .button.secondary:hover{background:#333849;border-color:#6974a4;color:#fff}
+.brandmark{display:block;object-fit:contain;background:transparent;border-radius:0;color:inherit}.brand-up{color:#536de0}:root[data-theme=dark] .brand-up{color:#aab7ff}

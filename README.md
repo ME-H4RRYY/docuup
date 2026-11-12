@@ -1,6 +1,6 @@
-# FormFit
+# DocuUP
 
-A browser-based document utility website built with React, TypeScript, and Vite. Image and PDF processing happens locally in your browser; files are not uploaded to FormFit.
+A browser-based document utility website built with React, TypeScript, and Vite. Image and PDF processing happens locally in your browser; files are not uploaded to DocuUP.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ npm test
 2. In Cloudflare Pages, create a project from the repository.
 3. Set build command to `npm run build` and output directory to `dist`.
 4. Deploy. The static site needs no server-side environment variables.
-5. Replace the example canonical domain `formfit.tools` in `index.html`, `public/robots.txt`, and `public/sitemap.xml` with the production domain before launch.
+5. The current canonical and sitemap domain is `https://formfit-2fr.pages.dev/`. Update it if you attach a custom domain in Cloudflare Pages.
 
 No GA4 measurement ID or Search Console verification token is included. Configure those only with real values. Do not send document contents or filenames to analytics.
 
@@ -56,7 +56,7 @@ Homepage `/`, directory `/tools`, category directories `/image-tools`, `/pdf-too
 - PDF rewriting cannot guarantee meaningful compression and may increase size. Encrypted or malformed PDFs may fail. Large PDFs can use substantial memory.
 - PDF page preview and per-page rotation selection are not included. Rotation applies to all pages; page extraction supports ranges and individual pages.
 - “Contact” is informational because no contact address was supplied.
-- SEO canonical and sitemap URLs use `formfit.tools` as an example and should be updated to the production domain.
+- SEO canonical and sitemap URLs currently use the Cloudflare Pages domain and should be updated if you attach a custom domain.
 - Automated tests cover validator rules and generated PDF merge, extraction, rotation, and rewrite files. Image processing currently lacks automated canvas integration tests and the site has no Playwright end-to-end suite.
 - PDF.js page rendering/thumbnail inspection is not included in this release.
 
