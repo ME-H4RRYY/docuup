@@ -31,7 +31,7 @@ npm test
 2. In Cloudflare Pages, create a project from the repository.
 3. Set build command to `npm run build` and output directory to `dist`.
 4. Deploy. The static site needs no server-side environment variables.
-5. The current canonical and sitemap domain is `https://formfit-2fr.pages.dev/`. Update it if you attach a custom domain in Cloudflare Pages.
+5. The current canonical and sitemap domain is `https://docuup.pages.dev/`. Update it if you attach a custom domain in Cloudflare Pages.
 
 No GA4 measurement ID or Search Console verification token is included. Configure those only with real values. Do not send document contents or filenames to analytics.
 
